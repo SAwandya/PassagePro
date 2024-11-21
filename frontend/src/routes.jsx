@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
 import BookingPage from "./pages/BookingPage";
 import MainPassengerData from "./pages/MainPassengerData";
+import ExtrasPage from "./pages/ExtrasPage";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/mainpassengerdata",
         element: <MainPassengerData />,
+      },
+      {
+        path: "/options",
+        element: <ExtrasPage />,
       },
     ],
   },

@@ -85,7 +85,7 @@ const TicketsSummary = () => {
         variant="contained"
         color="primary"
         size="large"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/options")}
       >
         Continue to ticket options
       </Button>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Grid } from "@mui/material";
-import BookingStepper from "./BookingStepper";
-import ExtrasOptions from "./ExtrasOptions";
-import TicketsSummary from "./TicketsSummary";
+import BookingStepper from "../components/BookingStepper";
+import ExtrasOptions from "../components/ExtrasOptions";
+import TicketsSummary from "../components/TicketsSummary";
 
 const ExtrasPage = () => {
   return (
