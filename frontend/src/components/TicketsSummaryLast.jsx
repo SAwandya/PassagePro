@@ -3,8 +3,11 @@ import { Box, Typography, Button, Tooltip, IconButton } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import PersonIcon from "@mui/icons-material/Person";
+import { useNavigate } from "react-router-dom";
 
 const TicketsSummaryLast = () => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ bgcolor: "#F8F9FA", p: 3, borderRadius: 2 }}>
       <Typography variant="h6" gutterBottom>
@@ -67,6 +70,7 @@ const TicketsSummaryLast = () => {
         color="primary"
         size="large"
         sx={{ mt: 3 }}
+        onClick={() => navigate("/payment")}
       >
         Continue to payment
       </Button>

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Grid } from "@mui/material";
 import BookingStepper from "../components/BookingStepper";
 import ExtrasOptions from "../components/ExtrasOptions";
-import TicketsSummary from "../components/TicketsSummary";
+import TicketsSummaryLast from "../components/TicketsSummaryLast";
 
 const ExtrasPage = () => {
   return (
@@ -13,7 +13,7 @@ const ExtrasPage = () => {
           <ExtrasOptions />
         </Grid>
         <Grid item xs={12} md={4}>
-          <TicketsSummary />
+          <TicketsSummaryLast />
         </Grid>
       </Grid>
     </Container>
