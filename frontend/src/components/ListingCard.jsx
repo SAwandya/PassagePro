@@ -13,8 +13,12 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LuggageIcon from "@mui/icons-material/Luggage";
+import { useNavigate } from "react-router-dom";
 
 const ListingCard = ({ listing }) => {
+
+
+    const navigate = useNavigate();
   return (
     <Card
       sx={{
@@ -90,7 +94,11 @@ const ListingCard = ({ listing }) => {
           <Typography variant="h5" color="primary" sx={{ mb: 2 }}>
             US${listing.price} /
           </Typography>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => navigate("/bookingdetails")}
+          >
             Book tickets
           </Button>
         </Box>

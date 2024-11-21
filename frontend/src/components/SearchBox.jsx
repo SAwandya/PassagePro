@@ -4,8 +4,10 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import { useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -58,6 +60,7 @@ const SearchBox = () => {
           px: 4,
           py: 1.5,
         }}
+        onClick={() => navigate("/search")}
       >
         Find tickets
       </Button>

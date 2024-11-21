@@ -5,6 +5,8 @@ import LuggageIcon from "@mui/icons-material/Luggage";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import PolicyAndOperatorInfo from "./PolicyAndOperatorInfo";
+import ReviewsSection from "./ReviewsSection";
+import Feedbacks from "./feedbacks";
 
 const TripDetails = () => {
   return (
@@ -166,11 +168,14 @@ const TripDetails = () => {
             />
           </Box>
         </Box>
-        <Box sx={{ mt: 4 }}>
-          {/* Previous sections */}
-          <Divider sx={{ my: 4 }} />
-          <PolicyAndOperatorInfo />
-        </Box>
+
+        <Divider sx={{ my: 4 }} />
+        <PolicyAndOperatorInfo />
+        <Divider sx={{ my: 4 }} />
+
+        <ReviewsSection />
+        <Divider sx={{ my: 4 }} />
+        <Feedbacks/>
       </Box>
 
       <Divider sx={{ my: 4 }} />

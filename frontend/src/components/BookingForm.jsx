@@ -10,8 +10,10 @@ import {
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
+import { useNavigate } from "react-router-dom";
 
 const BookingForm = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -127,6 +129,7 @@ const BookingForm = () => {
         color="primary"
         size="large"
         sx={{ mb: 2 }}
+        onClick={() => navigate("/mainpassengerdata")}
       >
         Continue to passenger details
       </Button>

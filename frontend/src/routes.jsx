@@ -3,6 +3,7 @@ import Layout from "./pages/Layout";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
 import BookingPage from "./pages/BookingPage";
+import MainPassengerData from "./pages/MainPassengerData";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/bookingdetails",
         element: <BookingPage />,
+      },
+      {
+        path: "/mainpassengerdata",
+        element: <MainPassengerData />,
       },
     ],
   },
