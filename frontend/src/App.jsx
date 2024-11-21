@@ -1,12 +1,12 @@
 import { CssBaseline } from "@mui/material";
 import "./App.css";
-import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
       <CssBaseline />
-      <Header />
+      <HomePage />
     </>
   );
 }
