@@ -28,10 +28,28 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiSlider: {
+      styleOverrides: {
+        root: {
+          color: "#FF5722",
+        },
+        thumb: {
+          backgroundColor: "#fff",
+          border: "2px solid #FF5722",
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)",
+        },
+      },
+    },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          color: "#666666",
         },
       },
     },

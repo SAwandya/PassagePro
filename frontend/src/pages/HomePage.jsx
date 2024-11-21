@@ -24,7 +24,6 @@ const HomePage = () => {
           backgroundPosition: "center",
         }}
       >
-        <Navbar />
         <Hero />
         <SearchBox />
       </Box>
@@ -36,7 +35,6 @@ const HomePage = () => {
         <OperatorsSection />
         <MoreRoutesSection />
         <AppPromotion />
-        <Footer />
       </Box>
     </>
   );
