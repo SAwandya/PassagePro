@@ -3,6 +3,7 @@ import { Box, Grid, Container } from "@mui/material";
 import BookingHeader from "../components/BookingHeader";
 import CarImageGallery from "../components/CarImageGallery";
 import BookingForm from "../components/BookingForm";
+import TripDetails from "../components/TripDetails";
 
 const BookingPage = () => {
   return (
@@ -11,6 +12,7 @@ const BookingPage = () => {
       <Grid container spacing={4}>
         <Grid item xs={12} md={8}>
           <CarImageGallery />
+          <TripDetails/>
         </Grid>
         <Grid item xs={12} md={4}>
           <BookingForm />
