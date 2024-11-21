@@ -13,7 +13,7 @@ const SearchPage = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{ Width: "100vh" }}>
       <SearchHeader
         routes={transportData.routes}
         transportTypes={transportData.transportTypes}
