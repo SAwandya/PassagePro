@@ -5,6 +5,8 @@ import SearchBox from "./SearchBox";
 import { Box } from "@mui/material";
 import Features from "./Features";
 import Reviews from "./Reviews";
+import TransportationSection from "./TransportationSection";
+import PopularRoutes from "./PopularRoutes";
 
 const Header = () => {
   return (
@@ -22,6 +24,8 @@ const Header = () => {
       <SearchBox />
       <Features />
       <Reviews />
+      <TransportationSection/>
+      <PopularRoutes/>
     </Box>
   );
 };
