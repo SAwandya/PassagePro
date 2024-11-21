@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import SearchBox from "./SearchBox";
 import { Box } from "@mui/material";
+import Features from "./Features";
+import Reviews from "./Reviews";
 
 const Header = () => {
   return (
@@ -18,6 +20,8 @@ const Header = () => {
       <Navbar />
       <Hero />
       <SearchBox />
+      <Features />
+      <Reviews />
     </Box>
   );
 };
