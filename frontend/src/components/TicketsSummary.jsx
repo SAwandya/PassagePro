@@ -85,7 +85,7 @@ const TicketsSummary = () => {
         variant="contained"
         color="primary"
         size="large"
-        onClick={() => navigate("/options")}
+        onClick={() => navigate("/seatbooking")}
       >
         Continue to ticket options
       </Button>
