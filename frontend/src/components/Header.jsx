@@ -7,6 +7,10 @@ import Features from "./Features";
 import Reviews from "./Reviews";
 import TransportationSection from "./TransportationSection";
 import PopularRoutes from "./PopularRoutes";
+import OperatorsSection from "./OperatorsSection";
+import MoreRoutesSection from "./MoreRoutesSection";
+import AppPromotion from "./AppPromotion";
+import Footer from "./Footer";
 
 const Header = () => {
   return (
@@ -26,6 +30,10 @@ const Header = () => {
       <Reviews />
       <TransportationSection/>
       <PopularRoutes/>
+      <OperatorsSection/>
+      <MoreRoutesSection/>
+      <AppPromotion/>
+      <Footer/>
     </Box>
   );
 };

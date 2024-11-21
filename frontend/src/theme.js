@@ -14,6 +14,10 @@ const theme = createTheme({
       fontSize: "1rem",
       lineHeight: 1.5,
     },
+    h6: {
+      fontSize: "1.125rem",
+      fontWeight: 600,
+    },
   },
   palette: {
     primary: {
@@ -28,6 +32,16 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)",
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          "&:hover": {
+            textDecoration: "none",
+          },
         },
       },
     },
