@@ -53,8 +53,8 @@ const SearchBox = () => {
       <Button
         variant="contained"
         sx={{
-          backgroundColor: "#FF5722",
-          "&:hover": { backgroundColor: "#F4511E" },
+          backgroundColor: "#4F75FF",
+          "&:hover": { backgroundColor: "#4F75FF" },
           borderRadius: "8px",
           textTransform: "none",
           px: 4,
