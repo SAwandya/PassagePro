@@ -70,9 +70,9 @@ const BookingSummary = ({ selectedSeats }) => {
         color="primary"
         size="large"
         sx={{
-          bgcolor: "#FF5722",
+          bgcolor: "#4F75FF",
           "&:hover": {
-            bgcolor: "#F4511E",
+            bgcolor: "#6439FF",
           },
         }}
         onClick={() => navigate("/options")}

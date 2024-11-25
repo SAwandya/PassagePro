@@ -11,22 +11,32 @@ import OperatorsSection from "../components/OperatorsSection";
 import MoreRoutesSection from "../components/MoreRoutesSection";
 import AppPromotion from "../components/AppPromotion";
 import Footer from "../components/Footer";
+import useGameQueryStore from "../store";
+import AuthModal from "../components/auth/AuthModal";
 
 const HomePage = () => {
+  const SetIsRegisterOpen = useGameQueryStore((s) => s.SetIsRegisterOpen);
+  const isRegisterOpen = useGameQueryStore((s) => s.isRegisterOpen);
+
   return (
     <>
       <Box
         sx={{
-          minHeight: "60vh",
+          minHeight: "80vh",
           background:
-            'linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("../src/assets/b03.jpg")',
+            'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.8)), url("../src/assets/topimage.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <Hero />
-        <SearchBox />
+        {" "}
+        <Box sx={{ maxWidth: "1200px", margin: "auto", marginTop: "100px" }}>
+          {" "}
+          <Hero />
+          <SearchBox />
+        </Box>
       </Box>
+
       <Box>
         <Features />
         <Reviews />
@@ -35,6 +45,10 @@ const HomePage = () => {
         <OperatorsSection />
         <MoreRoutesSection />
         <AppPromotion />
+        <AuthModal
+          open={isRegisterOpen}
+          onClose={() => SetIsRegisterOpen(false)}
+        />
       </Box>
     </>
   );

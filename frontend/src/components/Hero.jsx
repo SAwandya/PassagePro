@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 const Hero = () => {
   return (
-    <Box sx={{ textAlign: "center", mt: 8, mb: 4 }}>
+    <Box sx={{ textAlign: "center", mb: 4 }}>
       <Typography
         variant="h1"
         sx={{

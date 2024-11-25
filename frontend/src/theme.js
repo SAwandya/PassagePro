@@ -21,21 +21,21 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#FF5722",
+      main: "#4F75FF",
     },
     secondary: {
-      main: "#0000FF",
+      main: "#6439FF",
     },
   },
   components: {
     MuiSlider: {
       styleOverrides: {
         root: {
-          color: "#FF5722",
+          color: "#4F75FF",
         },
         thumb: {
           backgroundColor: "#fff",
-          border: "2px solid #FF5722",
+          border: "2px solid #4F75FF",
         },
       },
     },
@@ -49,7 +49,7 @@ const theme = createTheme({
     MuiCheckbox: {
       styleOverrides: {
         root: {
-          color: "#666666",
+          color: "#4F75FF",
         },
       },
     },

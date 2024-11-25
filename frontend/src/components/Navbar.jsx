@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppBar, Toolbar, Box, Button, Select, MenuItem } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import useGameQueryStore from "../store";
 
 const Navbar = () => {
+
+  const SetIsRegisterOpen = useGameQueryStore((s) => s.SetIsRegisterOpen);
+
   return (
     <AppBar
       position="static"
@@ -43,12 +47,13 @@ const Navbar = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: "#FF5722",
-              "&:hover": { backgroundColor: "#F4511E" },
+              backgroundColor: "#4F75FF",
+              "&:hover": { backgroundColor: "#6439FF" },
               borderRadius: "8px",
               textTransform: "none",
               px: 3,
             }}
+            onClick={() => SetIsRegisterOpen(true)}
           >
             Create an account
           </Button>
