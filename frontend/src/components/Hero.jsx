@@ -9,7 +9,7 @@ const Hero = () => {
         sx={{
           fontSize: "48px",
           fontWeight: 700,
-          color: "#1A1A1A",
+          color: "#ffffff",
           mb: 2,
         }}
       >
@@ -20,7 +20,7 @@ const Hero = () => {
         sx={{
           fontSize: "24px",
           fontWeight: 400,
-          color: "#1A1A1A",
+          color: "#ffffff",
         }}
       >
         To travel the world's best destinations

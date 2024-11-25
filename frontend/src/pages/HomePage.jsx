@@ -22,16 +22,23 @@ const HomePage = () => {
     <>
       <Box
         sx={{
-          minHeight: "80vh",
+          minHeight: "70vh",
           background:
-            'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.8)), url("../src/assets/topimage.png")',
+            'linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.3)),url("../src/assets/mainimage.jpg")',
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top center", // Image reduces from top
+          backgroundRepeat: "no-repeat", // Prevents image repetition
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        {" "}
-        <Box sx={{ maxWidth: "1200px", margin: "auto", marginTop: "100px" }}>
-          {" "}
+        <Box
+          sx={{
+            maxWidth: "1200px",
+            position: "absolute",
+          }}
+        >
           <Hero />
           <SearchBox />
         </Box>

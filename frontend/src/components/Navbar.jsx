@@ -11,37 +11,50 @@ const Navbar = () => {
     <AppBar
       position="static"
       elevation={0}
-      sx={{ background: "transparent", py: 1 }}
+      sx={{ background: "transparent", py: 1, position: "absolute" }}
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        <img src="/logo.png" alt="BookaWay" style={{ height: "32px" }} />
+        <img src="../../src/assets/mainlogo.png" alt="BookaWay" style={{ height: "82px" }} />
 
-        <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 3,
+            color: "#fffff",
+          }}
+        >
           <Select
             value="EN"
             variant="standard"
+            color="primary"
             IconComponent={KeyboardArrowDownIcon}
-            sx={{ minWidth: 100 }}
+            sx={{ minWidth: 100, color: "#fffff" }}
           >
-            <MenuItem value="EN">🇬🇧 English</MenuItem>
+            <MenuItem value="EN">
+              🇬🇧 English
+            </MenuItem>
           </Select>
 
           <Select
             value="US$"
             variant="standard"
+            color="primary"
             IconComponent={KeyboardArrowDownIcon}
             sx={{ minWidth: 100 }}
           >
-            <MenuItem value="US$">US$</MenuItem>
+            <MenuItem value="US$">
+              US$
+            </MenuItem>
           </Select>
 
-          <Button color="inherit" sx={{ color: "#1A1A1A" }}>
+          <Button color="inherit" sx={{ color: "#fffff" }}>
             Blog
           </Button>
-          <Button color="inherit" sx={{ color: "#1A1A1A" }}>
+          <Button color="inherit" sx={{ color: "#fffff" }}>
             Help center
           </Button>
-          <Button color="inherit" sx={{ color: "#1A1A1A" }}>
+          <Button color="inherit" sx={{ color: "#fffff" }}>
             My bookings
           </Button>
           <Button
