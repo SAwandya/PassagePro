@@ -1,10 +1,23 @@
 import React from "react";
-import { Box, Typography, Button, Divider } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { Box, Typography, Button, Divider, TextField } from "@mui/material";
 import SocialButtons from "./SocialButtons";
 import AuthFooter from "./AuthFooter";
 import AuthTerms from "./AuthTerms";
 
 const RegisterView = ({ onViewChange }) => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  // Function to handle form submission
+  const onSubmit = (data) => {
+    console.log("Registration Data:", data);
+    // You can integrate this with your API call here
+  };
+
   return (
     <Box>
       <Box sx={{ textAlign: "center", mb: 4 }}>
@@ -28,15 +41,53 @@ const RegisterView = ({ onViewChange }) => {
 
       <Divider sx={{ my: 3 }}>OR</Divider>
 
-      <Button
-        fullWidth
-        variant="contained"
-        color="warning"
-        onClick={() => onViewChange("signup")}
-        sx={{ mb: 3, py: 1.5 }}
-      >
-        Sign up with your email
-      </Button>
+      {/* Registration Form */}
+      <Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
+        {/* Email Field */}
+        <TextField
+          fullWidth
+          label="Email"
+          variant="outlined"
+          margin="normal"
+          {...register("email", {
+            required: "Email is required",
+            pattern: {
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              message: "Enter a valid email",
+            },
+          })}
+          error={!!errors.email}
+          helperText={errors.email?.message}
+        />
+
+        {/* Password Field */}
+        <TextField
+          fullWidth
+          label="Password"
+          variant="outlined"
+          margin="normal"
+          type="password"
+          {...register("password", {
+            required: "Password is required",
+            minLength: {
+              value: 6,
+              message: "Password must be at least 6 characters long",
+            },
+          })}
+          error={!!errors.password}
+          helperText={errors.password?.message}
+        />
+
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="warning"
+          sx={{ mt: 3, py: 1.5 }}
+        >
+          Register
+        </Button>
+      </Box>
 
       <AuthFooter
         text="Already have an account?"
