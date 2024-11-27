@@ -3,7 +3,6 @@ const { User, validate } = require("../models/user");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const auth = require("../middleware/auth");
 
 router.get("/", async (req, res) => {
   const users = await User.find().sort("name");

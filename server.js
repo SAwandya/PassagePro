@@ -11,6 +11,7 @@ require("dotenv").config();
 const session = require("express-session");
 const path = require("path");
 const swaggerDocs = require("./swagger");
+const route = require("./routes/route");
 
 const mongo_url = process.env.MONGO_URL;
 
@@ -39,11 +40,12 @@ app.use(passport.session());
 app.use(facebookPassport.initialize());
 app.use(facebookPassport.session());
 
-// Initialize Swagger docs
 swaggerDocs(app);
 
 app.use("/api/user", user);
 app.use("/api/auth", auth);
+
+app.use("/api/routes", route)
 
 // Serve static files from the React frontend
 app.use(express.static(path.join(__dirname, "../frontend/dist"))); // or "../frontend/dist" if "dist" is your build output

@@ -21,7 +21,7 @@ router.get(
   (req, res) => {
   const token = generateToken(req.user, "google");
 
-    res.redirect(`http://localhost:80/login/?token=${token}`); // Redirect to dashboard or any other page
+    res.redirect(`http://localhost:5173/login/?token=${token}`); // Redirect to dashboard or any other page
   }
 );
 
@@ -37,7 +37,7 @@ router.get(
   passport.authenticate("facebook", { failureRedirect: "/" }),
   (req, res) => {
     const token = generateToken(req.user, "facebook");
-    res.redirect(`http://localhost:80/login/?token=${token}`); // Redirect to frontend with token
+    res.redirect(`http://localhost:5173/login/?token=${token}`); // Redirect to frontend with token
   }
 );
 
