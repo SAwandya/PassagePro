@@ -7,6 +7,7 @@ import MainPassengerData from "./pages/MainPassengerData";
 import ExtrasPage from "./pages/ExtrasPage";
 import PaymentPage from "./pages/PaymentPage";
 import SeatBookingPage from "./pages/SeatBookingPage";
+import SocialButtons from "./components/auth/SocialButtons";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         element: <SeatBookingPage />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <SocialButtons />,
   },
 
   // {
