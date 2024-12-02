@@ -35,15 +35,32 @@ const Navbar = () => {
             <MenuItem value="US$">US$</MenuItem>
           </Select>
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Blog" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Help center" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="My bookings" />
-        </ListItem>
+        {["Blog", "Help center", "My bookings"].map((text) => (
+          <ListItem
+            button
+            key={text}
+            sx={{
+              backgroundColor: "#ffffff",
+              "&:hover": {
+                backgroundColor: "#f0f0f0",
+                "& .MuiListItemText-primary": {
+                  color: "#4F75FF",
+                },
+              },
+            }}
+          >
+            <ListItemText
+              primary={text}
+              sx={{
+                color: "#000000",
+                fontSize: "12px", // Smaller font size for mobile view
+                "@media (min-width:600px)": {
+                  fontSize: "16px", // Larger font size for desktop
+                },
+              }}
+            />
+          </ListItem>
+        ))}
         <ListItem>
           <Button
             variant="contained"
@@ -96,15 +113,19 @@ const Navbar = () => {
           >
             <MenuItem value="US$">US$</MenuItem>
           </Select>
-          <Button color="inherit" sx={{ color: "#ffffff" }}>
-            Blog
-          </Button>
-          <Button color="inherit" sx={{ color: "#ffffff" }}>
-            Help center
-          </Button>
-          <Button color="inherit" sx={{ color: "#ffffff" }}>
-            My bookings
-          </Button>
+          {["Blog", "Help center", "My bookings"].map((text) => (
+            <Button
+              key={text}
+              sx={{
+                color: "#ffffff",
+                fontSize: "16px", // Desktop font size
+                textTransform: "none",
+                "&:hover": { color: "#000000", backgroundColor: "#ffffff" },
+              }}
+            >
+              {text}
+            </Button>
+          ))}
           <Button
             variant="contained"
             sx={{
