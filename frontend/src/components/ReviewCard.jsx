@@ -18,7 +18,6 @@ const ReviewCard = ({
       }}
     >
       <Rating value={rating} readOnly sx={{ mb: 2 }} />
-
       <Typography
         variant="body1"
         sx={{
@@ -42,7 +41,6 @@ const ReviewCard = ({
           </Typography>
         )}
       </Typography>
-
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="body2" sx={{ color: "#666666" }}>
           {author}
